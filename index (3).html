@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Berimbolo Security - Монголын тэргүүлэгч аюулгүй байдлын системийн компани. Дохиолол, CCTV, хандалтын хяналт.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Berimbolo Security — Аюулгүй байдлын тэргүүлэгч систем</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#home" onclick="scrollToSection('home'); return false;">
+    <div class="shield">🛡</div>
+    BERIMBOLO SECURITY
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" onclick="scrollToSection('home'); return false;">Нүүр</a></li>
+    <li><a href="#services" onclick="scrollToSection('services'); return false;">Үйлчилгээ</a></li>
+    <li><a href="#pricing" onclick="scrollToSection('pricing'); return false;">Үнэ</a></li>
+    <li><a href="#order" onclick="scrollToSection('order'); return false;">Захиалга</a></li>
+    <li><a href="#about" onclick="scrollToSection('about'); return false;">Бидний тухай</a></li>
+    <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Холбоо барих</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+  <button class="nav-cta" onclick="openLogin()">Нэвтрэх →</button>
+</nav>
+
+<!-- Mobile nav menu -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobileMenu(); scrollToSection('home'); return false;">Нүүр</a>
+  <a href="#services" onclick="closeMobileMenu(); scrollToSection('services'); return false;">Үйлчилгээ</a>
+  <a href="#pricing" onclick="closeMobileMenu(); scrollToSection('pricing'); return false;">Үнэ</a>
+  <a href="#order" onclick="closeMobileMenu(); scrollToSection('order'); return false;">Захиалга</a>
+  <a href="#about" onclick="closeMobileMenu(); scrollToSection('about'); return false;">Бидний тухай</a>
+  <a href="#contact" onclick="closeMobileMenu(); scrollToSection('contact'); return false;">Холбоо барих</a>
+  <a href="#" onclick="openLogin(); closeMobileMenu(); return false;" style="color:var(--accent);">Ажилтны нэвтрэх →</a>
+</div>
+
+<!-- MAIN SITE -->
+<div id="site">
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Найдвартай хамгаалалт</div>
+      <h1>ТА АЮУЛГҮЙ<br>БАЙДЛАА<br><span class="accent-text">БИДЭНД</span> ДААТГА</h1>
+      <p class="hero-sub">Berimbolo Security нь айл өрх болон жижиг бизнесүүдэд зориулан хамгаалалтын системийг суурилуулж, хяналтын дэвшилтэт шийдлүүдийг санал болгодог.</p>
+      <div class="hero-buttons">
+        <a href="#order" class="btn-primary" onclick="scrollToSection('order'); return false;">Захиалга өгөх 🛡</a>
+        <a href="#services" class="btn-outline" onclick="scrollToSection('services'); return false;">Үйлчилгээ үзэх</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num" data-count="500">0</div>
+          <div class="stat-label">Суурилуулсан систем</div>
+        </div>
+        <div>
+          <div class="stat-num" data-count="24">0</div>
+          <div class="stat-label">/7 Хяналтын үйлчилгээ</div>
+        </div>
+        <div>
+          <div class="stat-num" data-count="98">0</div>
+          <div class="stat-label">% Хэрэглэгчийн сэтгэл ханамж</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-tag">● Манай үйлчилгээ</div>
+    <h2>АЮУЛГҮЙ БАЙДЛЫН<br>БҮРЭН ШИЙДЭЛ</h2>
+    <p class="section-sub">Бид таны өмч хөрөнгийг хамгаалах хамгийн дэвшилтэт технологийг нэвтрүүлдэг.</p>
+    <div class="services-grid">
+      <div class="service-card" onclick="openApplyModal('Дохиолол суурилуулах')">
+        <div class="service-icon">🚨</div>
+        <h3>Дохиолол суурилуулах</h3>
+        <p>Хөдөлгөөн мэдрэгчтэй орчин үеийн халдагчийн дохиолол. Гар утсанд шууд мэдэгдэл илгээдэг.</p>
+        <span class="service-link">Дэлгэрэнгүй →</span>
+      </div>
+      <div class="service-card" onclick="openApplyModal('CCTV хяналтын систем')">
+        <div class="service-icon">📹</div>
+        <h3>CCTV хяналтын систем</h3>
+        <p>Онлайн болон дотоод санах ойтой CCTV камер. Алсаас бодит цагт хянах боломжтой.</p>
+        <span class="service-link">Дэлгэрэнгүй →</span>
+      </div>
+      <div class="service-card" onclick="openApplyModal('Хандалтын хяналт')">
+        <div class="service-icon">🔒</div>
+        <h3>Хандалтын хяналт</h3>
+        <p>Ухаалаг түгжээ, карт болон биометрийн хандалтын хяналтын систем суурилуулах.</p>
+        <span class="service-link">Дэлгэрэнгүй →</span>
+      </div>
+      <div class="service-card" onclick="openApplyModal('Засвар үйлчилгээ')">
+        <div class="service-icon">🔧</div>
+        <h3>Засвар үйлчилгээ</h3>
+        <p>Суурилуулсан системийн тогтмол хяналт, засвар, шинэчлэлтийн үйлчилгээ.</p>
+        <span class="service-link">Дэлгэрэнгүй →</span>
+      </div>
+      <div class="service-card" onclick="openNotifyModal('Алсаас хяналт (Premium)')">
+        <div class="service-icon">📡</div>
+        <h3>Алсаас хяналт</h3>
+        <p>Дохиолол болон CCTV бичлэгийг интернэтэд холбогдсон аль ч төхөөрөмжөөс хянах.</p>
+        <span class="service-link">Удахгүй →</span>
+      </div>
+      <div class="service-card" onclick="openNotifyModal('Бизнесийн хамгаалалт')">
+        <div class="service-icon">🏢</div>
+        <h3>Бизнесийн хамгаалалт</h3>
+        <p>Жижиг, дунд бизнесүүдэд зориулсан иж бүрэн аюулгүй байдлын шийдлүүд.</p>
+        <span class="service-link">Удахгүй →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="section-tag">● Үнийн санал</div>
+    <h2>ТОХИРОМЖТОЙ<br>ҮНИЙН БАГЦУУД</h2>
+    <p class="section-sub">Таны хэрэгцээнд тохирсон олон төрлийн багцуудаас сонгоно уу.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-name">🛡️ Үндсэн багц</div>
+        <div class="pricing-desc">Айл өрхийн стандарт хамгаалалт</div>
+        <div class="pricing-price">450,000₮ <span>/ сар</span></div>
+        <ul class="pricing-features">
+          <li>2 ширхэг CCTV камер</li>
+          <li>1 ширхэг дохиолол</li>
+          <li>Гар утасны мэдэгдэл</li>
+          <li>7 хоногийн бичлэг хадгалах</li>
+          <li>Техникийн дэмжлэг</li>
+        </ul>
+        <button class="order-card-btn primary" onclick="openApplyModal('Үндсэн багц')">Сонгох →</button>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-name">🏆 Тэргүүлэгч багц</div>
+        <div class="pricing-desc">Бизнесийн иж бүрэн хамгаалалт</div>
+        <div class="pricing-price">850,000₮ <span>/ сар</span></div>
+        <ul class="pricing-features">
+          <li>6 ширхэг CCTV камер</li>
+          <li>3 ширхэг дохиолол</li>
+          <li>Хандалтын хяналт</li>
+          <li>30 хоногийн бичлэг хадгалах</li>
+          <li>24/7 алсаас хяналт</li>
+          <li>Яаралтай хариу арга хэмжээ</li>
+        </ul>
+        <button class="order-card-btn primary" onclick="openApplyModal('Тэргүүлэгч багц')">Сонгох →</button>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-name">⚡ Мэргэжлийн багц</div>
+        <div class="pricing-desc">Томоохон объектын шийдэл</div>
+        <div class="pricing-price">1,500,000₮ <span>/ сар</span></div>
+        <ul class="pricing-features">
+          <li>12+ ширхэг CCTV камер</li>
+          <li>Иж бүрэн дохиоллын систем</li>
+          <li>Биометрийн хяналт</li>
+          <li>90 хоногийн бичлэг хадгалах</li>
+          <li>Тусгай инженер томилох</li>
+          <li>Тайлан, анализ</li>
+        </ul>
+        <button class="order-card-btn primary" onclick="openApplyModal('Мэргэжлийн багц')">Сонгох →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-tag">● Хэрэглэгчдийн сэтгэгдэл</div>
+    <h2>БИДНИЙ ТУХАЙ<br>ЮУ ХЭЛДЭГ ВЭ?</h2>
+    <p class="section-sub">Манай хэрэглэгчидийн бодит сэтгэгдэл.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Berimbolo Security-г сонгосноор гэр бүлийнхээ аюулгүй байдлыг бүрэн хангасан. Гар утсанд ирэх мэдэгдэл маш хурдан бөгөөд найдвартай."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">БД</div>
+          <div>
+            <div class="testimonial-name">Б.Дорж</div>
+            <div class="testimonial-role">Сүхбаатар дүүрэг</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Манай компанид CCTV болон дохиоллын систем суурилуулсан. Инженерүүд маш мэргэжлийн, ажил бүрэн чанартай хийсэн."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">СО</div>
+          <div>
+            <div class="testimonial-name">С.Оюунцэцэг</div>
+            <div class="testimonial-role">Сарчулуун ХХК</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Алсаас хянах боломж нь маш том давуу тал. Ажлын байрнаасаа гэрээ хянах боломжтой болсон. Баярлалаа Berimbolo!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">ДЭ</div>
+          <div>
+            <div class="testimonial-name">Д.Энхбаяр</div>
+            <div class="testimonial-role">Хан-Уул дүүрэг</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <div class="section-tag">● Бидний тухай</div>
+        <h2>РОЙС & РИКСОН<br>БЕРИМБОЛО</h2>
+        <p class="section-sub">Ах дүүс хоёрын байгуулсан Berimbolo Security компани нь таны гэр, бизнесийг хамгаалахад зориулагдсан.</p>
+        <p style="color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 24px;">
+          Бид орчин үеийн аюулгүй байдлын технологийг таны хэрэгцээнд тааруулан суурилуулж, тасралтгүй үйлчилгээ үзүүлдэг. Манай инженерүүд алсаас ажиллах боломжтой бөгөөд оффистой шуурхай холбоо бариад асуудлыг шийддэг.
+        </p>
+        <div style="display: flex; gap: 32px; margin-top: 32px;">
+          <div>
+            <div style="font-family: 'Bebas Neue'; font-size: 36px; color: var(--accent);">6+</div>
+            <div style="font-size: 13px; color: var(--muted);">Жилийн туршлага</div>
+          </div>
+          <div>
+            <div style="font-family: 'Bebas Neue'; font-size: 36px; color: var(--accent);">6</div>
+            <div style="font-size: 13px; color: var(--muted);">Мэргэшсэн ажилтан</div>
+          </div>
+          <div>
+            <div style="font-family: 'Bebas Neue'; font-size: 36px; color: var(--accent);">500+</div>
+            <div style="font-size: 13px; color: var(--muted);">Сэтгэл ханамжтай хэрэглэгч</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; font-weight: 700;">Манай баг — Бодит цагийн байдал</div>
+        <div class="staff-row" data-tooltip="Захирал">
+          <div class="staff-avatar">РБ</div>
+          <div class="staff-info">
+            <div class="staff-name">Ройс Беримболо</div>
+            <div class="staff-role">Үүсгэн байгуулагч, Захирал</div>
+          </div>
+          <span class="staff-status online">● Онлайн</span>
+        </div>
+        <div class="staff-row" data-tooltip="Захирал">
+          <div class="staff-avatar">РВ</div>
+          <div class="staff-info">
+            <div class="staff-name">Риксон Беримболо</div>
+            <div class="staff-role">Үүсгэн байгуулагч, Захирал</div>
+          </div>
+          <span class="staff-status remote">● Алсаас</span>
+        </div>
+        <div class="staff-row" data-tooltip="Оффисын ажилтан">
+          <div class="staff-avatar">ЖД</div>
+          <div class="staff-info">
+            <div class="staff-name">Жеймс Де Соуса</div>
+            <div class="staff-role">Оффисын ажилтан</div>
+          </div>
+          <span class="staff-status online">● Онлайн</span>
+        </div>
+        <div class="staff-row" data-tooltip="Оффисын ажилтан">
+          <div class="staff-avatar">СМ</div>
+          <div class="staff-info">
+            <div class="staff-name">Сара Миклетвейт</div>
+            <div class="staff-role">Оффисын ажилтан</div>
+          </div>
+          <span class="staff-status online">● Онлайн</span>
+        </div>
+        <div class="staff-row" data-tooltip="Инженер">
+          <div class="staff-avatar">ЛЧ</div>
+          <div class="staff-info">
+            <div class="staff-name">Лу Чен</div>
+            <div class="staff-role">Инженер</div>
+          </div>
+          <span class="staff-status remote">● Талбайд</span>
+        </div>
+        <div class="staff-row" data-tooltip="Инженер">
+          <div class="staff-avatar">ДУ</div>
+          <div class="staff-info">
+            <div class="staff-name">Даррен Уильямс</div>
+            <div class="staff-role">Инженер</div>
+          </div>
+          <span class="staff-status remote">● Талбайд</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER / APPLY FOR SERVICE -->
+  <section id="order">
+    <div class="order-intro">
+      <div class="section-text">
+        <div class="section-tag">● Захиалга өгөх</div>
+        <h2>ҮЙЛЧИЛГЭЭ<br>ЗАХИАЛАХ</h2>
+        <p class="section-sub" style="margin-bottom:0;">Доорх үйлчилгээнүүдээс сонгон захиалга өгнө үү. Манай баг ажлын өдрүүдэд 09:00–18:00 цагт таньтай холбоо барина.</p>
+      </div>
+      <div class="availability-note">
+        <strong>⚠ Анхааруулга:</strong> "Тун удахгүй" гэж тэмдэглэгдсэн үйлчилгээнүүд одоогоор бэлэн бус байна. Та <strong>мэдэгдэл авах</strong> товч дарж урьдчилан бүртгүүлж болно — бэлэн болмогц бид тантай холбогдоно.
+      </div>
+    </div>
+
+    <div class="order-cards">
+      <div class="order-card">
+        <div class="order-card-top">
+          <div class="order-card-icon">🚨</div>
+          <span class="status-pill status-available">● Захиалах боломжтой</span>
+        </div>
+        <h3>Дохиолол суурилуулах</h3>
+        <p>Хөдөлгөөн мэдрэгчтэй орчин үеийн дохиоллын систем. Гар утсанд шууд мэдэгдэл.</p>
+        <button class="order-card-btn primary" onclick="openApplyModal('Дохиолол суурилуулах')">Захиалга өгөх →</button>
+      </div>
+
+      <div class="order-card">
+        <div class="order-card-top">
+          <div class="order-card-icon">📹</div>
+          <span class="status-pill status-available">● Захиалах боломжтой</span>
+        </div>
+        <h3>CCTV хяналтын систем</h3>
+        <p>Онлайн болон дотоод санах ойтой CCTV камер. Алсаас бодит цагт хянах боломж.</p>
+        <button class="order-card-btn primary" onclick="openApplyModal('CCTV хяналтын систем')">Захиалга өгөх →</button>
+      </div>
+
+      <div class="order-card">
+        <div class="order-card-top">
+          <div class="order-card-icon">🔒</div>
+          <span class="status-pill status-available">● Захиалах боломжтой</span>
+        </div>
+        <h3>Хандалтын хяналт</h3>
+        <p>Ухаалаг түгжээ, карт болон биометрийн хандалтын хяналтын систем суурилуулах.</p>
+        <button class="order-card-btn primary" onclick="openApplyModal('Хандалтын хяналт')">Захиалга өгөх →</button>
+      </div>
+
+      <div class="order-card">
+        <div class="order-card-top">
+          <div class="order-card-icon">🔧</div>
+          <span class="status-pill status-available">● Захиалах боломжтой</span>
+        </div>
+        <h3>Засвар үйлчилгээ</h3>
+        <p>Суурилуулсан системийн тогтмол хяналт, засвар болон шинэчлэлтийн үйлчилгээ.</p>
+        <button class="order-card-btn primary" onclick="openApplyModal('Засвар үйлчилгээ')">Захиалга өгөх →</button>
+      </div>
+
+      <div class="order-card">
+        <div class="order-card-top">
+          <div class="order-card-icon">📡</div>
+          <span class="status-pill status-coming-soon">⏳ Тун удахгүй</span>
+        </div>
+        <h3>Алсаас хяналт (Premium)</h3>
+        <p>24/7 мэргэжилтний алсаас хяналтын үйлчилгээ. Автомат хариу арга хэмжээ.</p>
+        <button class="order-card-btn notify" onclick="openNotifyModal('Алсаас хяналт (Premium)')">🔔 Мэдэгдэл авах</button>
+      </div>
+
+      <div class="order-card">
+        <div class="order-card-top">
+          <div class="order-card-icon">🏢</div>
+          <span class="status-pill status-coming-soon">⏳ Тун удахгүй</span>
+        </div>
+        <h3>Бизнесийн хамгаалалт</h3>
+        <p>Жижиг, дунд бизнесүүдэд зориулсан иж бүрэн аюулгүй байдлын шийдлүүд.</p>
+        <button class="order-card-btn notify" onclick="openNotifyModal('Бизнесийн хамгаалалт')">🔔 Мэдэгдэл авах</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-tag">● Холбоо барих</div>
+    <h2>БИДЭНТЭЙ ХОЛБОО<br>БАРИХ</h2>
+    <p class="section-sub">Үнийн санал авах, үйлчилгээ захиалах, цаг товлох эсвэл асуулт асуухыг хүсвэл бидэнтэй холбоо бар.</p>
+    <div class="contact-grid">
+      <div class="contact-form" id="publicContactForm">
+        <div class="form-group">
+          <label>ТАНЫ НЭР *</label>
+          <input type="text" id="cfName" placeholder="Бат Болд" required>
+        </div>
+        <div class="form-group">
+          <label>И-МЭЙЛ *</label>
+          <input type="email" id="cfEmail" placeholder="bat@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>УТАС *</label>
+          <input type="tel" id="cfPhone" placeholder="+976 9900 0000" required>
+        </div>
+        <div class="form-group">
+          <label>ХАЯГ</label>
+          <input type="text" id="cfAddr" placeholder="Дүүрэг, хороо, байр...">
+        </div>
+        <div class="form-group">
+          <label>ҮЙЛЧИЛГЭЭНИЙ ТӨРӨЛ *</label>
+          <select id="cfService" required>
+            <option value="">— Үйлчилгээ сонгоно уу —</option>
+            <option>Дохиолол суурилуулах</option>
+            <option>CCTV систем</option>
+            <option>Хандалтын хяналт</option>
+            <option>Засвар үйлчилгээ</option>
+            <option>Алсаас хяналт</option>
+            <option>Бизнесийн хамгаалалт</option>
+            <option>Үнийн санал авах</option>
+            <option>Бусад</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>МЕССЕЖ</label>
+          <textarea id="cfMsg" placeholder="Таны асуулт, хэрэгцээ..."></textarea>
+        </div>
+        <div id="cfError" style="display:none; background:rgba(248,81,73,0.1); border:1px solid rgba(248,81,73,0.3); color:var(--danger); padding:10px 14px; border-radius:var(--radius); font-size:13px;"></div>
+        <button class="btn-primary" onclick="submitContact()" style="border: none; width: fit-content;">
+          <span id="cfBtnText">Хүсэлт илгээх →</span>
+          <span id="cfBtnSpinner" class="spinner" style="display:none; margin-left:8px;"></span>
+        </button>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-ico">📍</div>
+          <div>
+            <h4>Хаяг</h4>
+            <p>Berimbolo Security Офис<br>Бизнесийн төв, 3 давхар<br>Сүхбаатар дүүрэг, Улаанбаатар</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">📞</div>
+          <div>
+            <h4>Утас</h4>
+            <p>+976 7700 1234<br>Даваа — Баасан, 09:00–18:00</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">✉️</div>
+          <div>
+            <h4>И-мэйл</h4>
+            <p>info@berimbolo.mn<br>support@berimbolo.mn</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">🚨</div>
+          <div>
+            <h4>Яаралтай утас</h4>
+            <p>+976 9900 9999<br>24/7 яаралтай үйлчилгээ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Berimbolo Security. Бүх эрх хуулиар хамгаалагдсан.</p>
+    <div class="footer-links">
+      <a href="#" onclick="openInfoModal('privacy'); return false;">Нууцлалын бодлого</a>
+      <a href="#" onclick="openInfoModal('terms'); return false;">Үйлчилгээний нөхцөл</a>
+      <a href="#contact" onclick="scrollToSection('contact'); return false;">Холбоо барих</a>
+      <a href="#" onclick="openLogin(); return false;">Ажилтны нэвтрэх</a>
+    </div>
+  </footer>
+
+</div><!-- /#site -->
+
+<!-- ─── APPLY FOR SERVICE MODAL ─── -->
+<div class="apply-modal" id="applyModal">
+  <div class="apply-modal-box">
+    <button class="modal-close" onclick="closeApplyModal()">✕</button>
+    <div class="modal-logo">
+      <div class="shield"></div>
+      <span>BERIMBOLO</span>
+    </div>
+    <h3>Үйлчилгээ захиалах</h3>
+    <p class="sub">Маягтыг бөглөнө үү. Манай баг 24 цагийн дотор тантай холбогдоно.</p>
+    <div class="apply-service-tag" id="applyServiceTag">🛡 Үйлчилгээ</div>
+    <div class="apply-form" id="applyFormBody">
+      <div class="form-group">
+        <label>ТАНЫ НЭР *</label>
+        <input type="text" id="apName" placeholder="Бат Болд" required>
+      </div>
+      <div class="form-group">
+        <label>УТАС *</label>
+        <input type="tel" id="apPhone" placeholder="+976 9900 0000" required>
+      </div>
+      <div class="form-group">
+        <label>И-МЭЙЛ</label>
+        <input type="email" id="apEmail" placeholder="bat@example.com">
+      </div>
+      <div class="form-group">
+        <label>ХАЯГ / БАЙРШИЛ *</label>
+        <input type="text" id="apAddr" placeholder="Дүүрэг, хороо, байр дугаар..." required>
+      </div>
+      <div class="form-group">
+        <label>ДАВХАР ТОО / ӨРӨӨНИЙ ТОО</label>
+        <input type="text" id="apRooms" placeholder="Жишээ: 3 давхар, 4 өрөө">
+      </div>
+      <div class="form-group">
+        <label>ТЭМДЭГЛЭЛ</label>
+        <textarea id="apNote" placeholder="Нэмэлт хүсэлт, онцлог нөхцөл..."></textarea>
+      </div>
+      <div class="apply-error" id="applyError">Заавал бөглөх талбаруудыг бөглөнө үү.</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <button class="btn-primary" onclick="submitApply()" style="border:none; flex:1;">
+          <span id="apBtnText">Захиалга илгээх →</span>
+          <span id="apBtnSpinner" class="spinner" style="display:none; margin-left:8px;"></span>
+        </button>
+        <button class="btn-outline" onclick="closeApplyModal()" style="flex:1; justify-content:center;">Болих</button>
+      </div>
+    </div>
+    <div class="form-success" id="applySuccess">
+      <div class="success-icon">✓</div>
+      <h4>Захиалга амжилттай!</h4>
+      <p>Таны захиалга хүлээн авлаа. Манай баг ажлын өдрүүдэд 09:00–18:00 цагт тантай утсаар холбогдоно.</p>
+      <button class="btn-primary" onclick="closeApplyModal()" style="border:none;">Хаах</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── NOTIFY MODAL ─── -->
+<div class="apply-modal" id="notifyModal">
+  <div class="apply-modal-box" style="width:480px;">
+    <button class="modal-close" onclick="closeNotifyModal()">✕</button>
+    <h3>🔔 Мэдэгдэл бүртгүүлэх</h3>
+    <p class="sub">Энэ үйлчилгээ одоогоор бэлэн болоогүй байна. Та имэйл хаягаа үлдээвэл бэлэн болмогц мэдэгдэл илгээнэ.</p>
+    <div class="apply-service-tag" id="notifyServiceTag">⏳ Үйлчилгээ</div>
+    <div class="apply-form" id="notifyFormBody">
+      <div class="form-group">
+        <label>ТАНЫ НЭР *</label>
+        <input type="text" id="ntName" placeholder="Бат Болд" required>
+      </div>
+      <div class="form-group">
+        <label>И-МЭЙЛ *</label>
+        <input type="email" id="ntEmail" placeholder="bat@example.com" required>
+      </div>
+      <div class="form-group">
+        <label>УТАС</label>
+        <input type="tel" id="ntPhone" placeholder="+976 9900 0000">
+      </div>
+      <div class="apply-error" id="notifyError">Нэр болон и-мэйл хаягаа оруулна уу.</div>
+      <div style="display:flex; gap:12px;">
+        <button class="btn-primary" onclick="submitNotify()" style="border:none; flex:1;">
+          <span id="ntBtnText">Бүртгүүлэх →</span>
+          <span id="ntBtnSpinner" class="spinner" style="display:none; margin-left:8px;"></span>
+        </button>
+        <button class="btn-outline" onclick="closeNotifyModal()" style="flex:1; justify-content:center;">Болих</button>
+      </div>
+    </div>
+    <div class="form-success" id="notifySuccess">
+      <div class="success-icon">🔔</div>
+      <h4>Бүртгэл амжилттай!</h4>
+      <p>Үйлчилгээ бэлэн болмогц имэйлээр мэдэгдэл илгээнэ. Баярлалаа!</p>
+      <button class="btn-primary" onclick="closeNotifyModal()" style="border:none;">Хаах</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PRIVACY / TERMS MODALS ─── -->
+<div class="info-modal" id="infoModal">
+  <div class="info-modal-box">
+    <button class="modal-close" onclick="closeInfoModal()">✕</button>
+    <div id="infoModalContent"></div>
+  </div>
+</div>
+
+<!-- ─── LOGIN MODAL ─── -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeLogin()">✕</button>
+    <div class="modal-logo">
+      <div class="shield"></div>
+      <span>BERIMBOLO</span>
+    </div>
+    <h3>Системд нэвтрэх</h3>
+    <p class="sub">Ажилтны портал — зөвхөн зөвшөөрөлтэй хэрэглэгчдэд зориулагдсан</p>
+    <div class="role-tabs">
+      <button class="role-tab active" onclick="setRole('admin', event)">Удирдлага</button>
+      <button class="role-tab" onclick="setRole('office', event)">Оффис</button>
+      <button class="role-tab" onclick="setRole('engineer', event)">Инженер</button>
+    </div>
+    <div class="login-error" id="loginError">Нэвтрэх нэр эсвэл нууц үг буруу байна.</div>
+    <div class="contact-form" style="gap: 14px;">
+      <div class="form-group">
+        <label>НЭВТРЭХ НЭР</label>
+        <input type="text" id="loginUser" placeholder="username" onkeydown="if(event.key==='Enter') doLogin()" autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label>НУУЦ ҮГ</label>
+        <input type="password" id="loginPass" placeholder="••••••••" onkeydown="if(event.key==='Enter') doLogin()" autocomplete="current-password">
+      </div>
+      <button class="btn-primary" onclick="doLogin()" style="border:none; width:100%; justify-content: center; margin-top: 4px;">
+        <span id="loginBtnText">Нэвтрэх →</span>
+        <span id="loginBtnSpinner" class="spinner" style="display:none; margin-left:8px;"></span>
+      </button>
+      <p style="font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px;">
+        Туршилтын нэвтрэлт: <strong style="color:var(--accent)">admin / admin123</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DASHBOARD ─── -->
+<div id="dashboard">
+  <nav style="position:fixed; z-index:900;">
+    <a class="nav-logo" href="#" onclick="return false;">
+      <div class="shield">🛡</div>
+      BERIMBOLO SECURITY
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPanel('overview'); return false;">Тойм</a></li>
+      <li><a href="#" onclick="showPanel('appointments'); return false;">Цаг товлолт</a></li>
+      <li><a href="#" onclick="showPanel('customers'); return false;">Хэрэглэгч</a></li>
+      <li><a href="#" onclick="showPanel('cctv'); return false;">CCTV</a></li>
+    </ul>
+    <div class="dash-user">
+      <div class="user-info">
+        <div class="user-name" id="dashUserName">–</div>
+        <div class="user-role" id="dashUserRole">–</div>
+      </div>
+      <div class="user-avatar" id="dashUserAvatar">?</div>
+      <button class="btn-logout" onclick="doLogout()">Гарах</button>
+    </div>
+  </nav>
+
+  <div class="dash-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">Ерөнхий</div>
+        <button class="sidebar-link active" onclick="showPanel('overview')">
+          <span class="ico">📊</span> Тойм
+        </button>
+        <button class="sidebar-link" onclick="showPanel('appointments')">
+          <span class="ico">📅</span> Цаг товлолт
+        </button>
+        <button class="sidebar-link" onclick="showPanel('jobs')">
+          <span class="ico">🔧</span> Ажлын даалгавар
+        </button>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Мэдээлэл</div>
+        <button class="sidebar-link" onclick="showPanel('customers')">
+          <span class="ico">👥</span> Хэрэглэгчид
+        </button>
+        <button class="sidebar-link" onclick="showPanel('staff')">
+          <span class="ico">🏢</span> Ажилтнууд
+        </button>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Хяналт</div>
+        <button class="sidebar-link" onclick="showPanel('cctv')">
+          <span class="ico">📹</span> CCTV Хяналт
+        </button>
+        <button class="sidebar-link" onclick="showPanel('reports')">
+          <span class="ico">📋</span> Тайлан
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dash-main">
+
+      <!-- OVERVIEW -->
+      <div class="panel active" id="panel-overview">
+        <div class="dash-header">
+          <div>
+            <h2>ТОЙМ</h2>
+            <p style="color:var(--muted); font-size:13px; margin-top:4px;" id="currentDate">2026 оны 5-р сар 22 — Баасан гараг</p>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <input type="text" class="search-bar" placeholder="Хайх..." id="dashSearch" onkeyup="searchDashboard()">
+            <button class="btn-sm btn-accent" onclick="refreshDashboard()">🔄 Шинэчлэх</button>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="label">Өнөөдрийн цаг товлолт</div>
+            <div class="value" id="statAppts">8</div>
+            <div class="change">↑ 2 нэмэлт</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Нийт хэрэглэгч</div>
+            <div class="value" id="statCustomers">142</div>
+            <div class="change">↑ 5 шинэ сар</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Идэвхтэй инженерүүд</div>
+            <div class="value">2</div>
+            <div class="change">Талбайд ажиллаж байна</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">CCTV системүүд</div>
+            <div class="value">67</div>
+            <div class="change">↑ 3 шинэ энэ сар</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>⚡ Шуурхай мэдэгдлүүд</h3>
+          <table class="data-table">
+            <thead><tr>
+              <th>Цаг</th><th>Төрөл</th><th>Мессеж</th><th>Байдал</th>
+            </tr></thead>
+            <tbody id="alertTableBody">
+              <tr><td>09:15</td><td>🔴 Дохиолол</td><td>Жеймс гудамж 14 — хөдөлгөөн мэдрэгдсэн</td><td><span class="badge badge-red">Шийдвэрлэж байна</span></td></tr>
+              <tr><td>10:30</td><td>📅 Цаг товлолт</td><td>Шинэ захиалга — Д.Энхбаяр 14:00</td><td><span class="badge badge-green">Баталгаажсан</span></td></tr>
+              <tr><td>11:00</td><td>🔧 Засвар</td><td>Лу Чен — батарей сольж дуусгасан</td><td><span class="badge badge-green">Дууссан</span></td></tr>
+              <tr><td>12:45</td><td>📦 Хангамж</td><td>Даррен — нэмэлт камер хүссэн</td><td><span class="badge badge-yellow">Хүлээгдэж байна</span></td></tr>
+              <tr><td>13:20</td><td>💳 Төлбөр</td><td>Сарчулуун компани — төлбөр хийсэн</td><td><span class="badge badge-blue">Баталгаажсан</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>📈 Энэ сарын гүйцэтгэл</h3>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-size:13px; color:var(--muted);">Суурилуулалт</span>
+                <span style="font-size:13px; font-weight:600;">85%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-size:13px; color:var(--muted);">Засвар</span>
+                <span style="font-size:13px; font-weight:600;">92%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-size:13px; color:var(--muted);">Хэрэглэгч сэтгэл ханамж</span>
+                <span style="font-size:13px; font-weight:600;">98%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width:98%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- NEW ORDERS PANEL -->
+        <div class="card" id="ordersCard">
+          <h3>📋 Шинэ захиалгууд <span style="float:right; font-size:13px; color:var(--muted);" id="newOrdersCount">0 шинэ</span></h3>
+          <table class="data-table" id="ordersTable">
+            <thead><tr>
+              <th>Огноо</th><th>Хэрэглэгч</th><th>Үйлчилгээ</th><th>Утас</th><th>Хаяг</th><th>Байдал</th><th>Үйлдэл</th>
+            </tr></thead>
+            <tbody id="ordersBody">
+              <tr id="noOrdersRow"><td colspan="7" style="text-align:center; color:var(--muted); padding:24px;">Одоогоор шинэ захиалга байхгүй. Вэбсайтаар захиалга өгөгдсөнөөр энд харагдана.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ORDER DETAILS MODAL -->
+        <div class="mini-modal" id="orderDetailModal">
+          <div class="mini-modal-box" style="width:560px;">
+            <button class="modal-close" onclick="closeOrderDetail()">✕</button>
+            <h3>📋 Захиалгын дэлгэрэнгүй</h3>
+            <div id="orderDetailContent" style="display:flex; flex-direction:column; gap:14px;">
+              <!-- Dynamic content -->
+            </div>
+            <div class="form-actions" style="margin-top:20px;">
+              <button class="btn-sm btn-accent" onclick="assignOrder()">Инженер оноох</button>
+              <button class="btn-sm btn-ghost" onclick="closeOrderDetail()">Хаах</button>
+            </div>
+          </div>
+        </div>
+
+      <!-- APPOINTMENTS -->
+      <div class="panel" id="panel-appointments">
+        <div class="dash-header">
+          <h2>📅 ЦАГ ТОВЛОЛТ</h2>
+          <div style="display:flex; gap:12px;">
+            <input type="date" class="search-bar" style="max-width:160px;" id="apptDateFilter" onchange="filterAppointments()">
+            <button class="btn-primary" style="border:none; font-size:13px;" onclick="openApptModal()">+ Шинэ цаг товлох</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Өнөөдрийн хуваарь — <span id="apptDateLabel">2026.05.22</span></h3>
+          <div class="appt-list" id="apptList">
+            <div class="appt-item">
+              <div class="appt-time">09:00</div>
+              <div class="appt-info">
+                <div class="appt-name">Б.Дорж — Дохиоллын засвар</div>
+                <div class="appt-detail">📍 Сүхбаатар дүүрэг, 3-р хороо · Инженер: Лу Чен</div>
+              </div>
+              <span class="badge badge-green">Дууссан</span>
+              <div class="appt-actions">
+                <button class="appt-btn" onclick="editAppt(this)">Засах</button>
+              </div>
+            </div>
+            <div class="appt-item">
+              <div class="appt-time">11:00</div>
+              <div class="appt-info">
+                <div class="appt-name">С.Оюунцэцэг — CCTV шинэ суурилуулалт</div>
+                <div class="appt-detail">📍 Хан-Уул дүүрэг, 11-р хороо · Инженер: Даррен Уильямс</div>
+              </div>
+              <span class="badge badge-yellow">Явагдаж байна</span>
+              <div class="appt-actions">
+                <button class="appt-btn" onclick="editAppt(this)">Засах</button>
+              </div>
+            </div>
+            <div class="appt-item">
+              <div class="appt-time">14:00</div>
+              <div class="appt-info">
+                <div class="appt-name">Д.Энхбаяр — Хандалтын хяналт</div>
+                <div class="appt-detail">📍 Баянгол дүүрэг, 5-р хороо · Инженер: Лу Чен</div>
+              </div>
+              <span class="badge badge-blue">Хүлээгдэж байна</span>
+              <div class="appt-actions">
+                <button class="appt-btn" onclick="editAppt(this)">Засах</button>
+                <button class="appt-btn" style="color: var(--danger); border-color: rgba(248,81,73,0.3);" onclick="cancelAppt(this)">Цуцлах</button>
+              </div>
+            </div>
+            <div class="appt-item">
+              <div class="appt-time">16:00</div>
+              <div class="appt-info">
+                <div class="appt-name">Сарчулуун ХХК — Ерөнхий үзлэг</div>
+                <div class="appt-detail">📍 Чингэлтэй дүүрэг, 1-р хороо · Инженер: Даррен Уильямс</div>
+              </div>
+              <span class="badge badge-blue">Хүлээгдэж байна</span>
+              <div class="appt-actions">
+                <button class="appt-btn" onclick="editAppt(this)">Засах</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOBS -->
+      <div class="panel" id="panel-jobs">
+        <div class="dash-header">
+          <h2>🔧 АЖЛЫН ДААЛГАВАР</h2>
+          <span style="color:var(--muted); font-size:13px;">Инженерүүдийн хэрэгцээний мэдээлэл</span>
+        </div>
+        <div class="card">
+          <h3>Идэвхтэй даалгаварууд</h3>
+          <div id="jobList">
+            <div class="job-card">
+              <div class="job-num">#001</div>
+              <div class="job-info">
+                <div class="job-title">CCTV камер суурилуулах — С.Оюунцэцэг</div>
+                <div class="job-meta">Инженер: Даррен Уильямс · Хан-Уул дүүрэг · 11:00 эхэлсэн</div>
+              </div>
+              <select class="job-status-sel" onchange="updateJobStatus(this)">
+                <option>Явагдаж байна</option>
+                <option>Дууссан</option>
+                <option>Хойшилсон</option>
+                <option>Нэмэлт хэрэгтэй</option>
+              </select>
+            </div>
+            <div class="job-card">
+              <div class="job-num">#002</div>
+              <div class="job-info">
+                <div class="job-title">Хандалтын хяналт суурилуулах — Д.Энхбаяр</div>
+                <div class="job-meta">Инженер: Лу Чен · Баянгол дүүрэг · 14:00 эхлэх</div>
+              </div>
+              <select class="job-status-sel" onchange="updateJobStatus(this)">
+                <option>Хүлээгдэж байна</option>
+                <option>Явагдаж байна</option>
+                <option>Дууссан</option>
+                <option>Нэмэлт хэрэгтэй</option>
+              </select>
+            </div>
+            <div class="job-card">
+              <div class="job-num">#003</div>
+              <div class="job-info">
+                <div class="job-title">Ерөнхий үзлэг — Сарчулуун ХХК</div>
+                <div class="job-meta">Инженер: Даррен Уильямс · Чингэлтэй дүүрэг · 16:00 эхлэх</div>
+              </div>
+              <select class="job-status-sel" onchange="updateJobStatus(this)">
+                <option>Хүлээгдэж байна</option>
+                <option>Явагдаж байна</option>
+                <option>Дууссан</option>
+                <option>Нэмэлт хэрэгтэй</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📦 Нэмэлт хангамжийн хүсэлтүүд</h3>
+          <table class="data-table">
+            <thead><tr><th>Инженер</th><th>Хүссэн зүйл</th><th>Тоо</th><th>Байдал</th><th>Үйлдэл</th></tr></thead>
+            <tbody id="supplyTableBody">
+              <tr>
+                <td>Даррен Уильямс</td>
+                <td>IP камер (4MP)</td>
+                <td>3 ширхэг</td>
+                <td><span class="badge badge-yellow">Хүлээгдэж байна</span></td>
+                <td><button class="appt-btn" onclick="approveSupply(this)">Батлах</button></td>
+              </tr>
+              <tr>
+                <td>Лу Чен</td>
+                <td>Батарей 12V 7Ah</td>
+                <td>2 ширхэг</td>
+                <td><span class="badge badge-green">Хүргэгдсэн</span></td>
+                <td><button class="appt-btn" disabled>Дууссан</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CUSTOMERS -->
+      <div class="panel" id="panel-customers">
+        <div class="dash-header">
+          <h2>👥 ХЭРЭГЛЭГЧИД</h2>
+          <div style="display:flex; gap:12px;">
+            <input type="text" class="search-bar" placeholder="Хайх..." id="customerSearch" onkeyup="searchCustomers()">
+            <button class="btn-primary" style="border:none; font-size:13px;" onclick="openCustomerForm()">+ Шинэ хэрэглэгч</button>
+          </div>
+        </div>
+        <div class="card" id="customerFormCard" style="display:none;">
+          <h3>Шинэ хэрэглэгч нэмэх</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>НЭР *</label>
+              <input type="text" id="cName" placeholder="Бат Болд" required>
+            </div>
+            <div class="form-group">
+              <label>УТАС</label>
+              <input type="tel" id="cPhone" placeholder="+976 9900 0000">
+            </div>
+            <div class="form-group">
+              <label>И-МЭЙЛ</label>
+              <input type="email" id="cEmail" placeholder="bat@example.com">
+            </div>
+            <div class="form-group">
+              <label>СИСТЕМ</label>
+              <select id="cSystem">
+                <option>Дохиолол</option>
+                <option>CCTV</option>
+                <option>Хандалтын хяналт</option>
+                <option>Иж бүрэн систем</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>ХАЯГ</label>
+              <input type="text" id="cAddr" placeholder="Дүүрэг, хороо, байр...">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-sm btn-accent" onclick="addCustomer()">Хадгалах</button>
+            <button class="btn-sm btn-ghost" onclick="closeCustomerForm()">Болих</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Хэрэглэгчдийн бүртгэл</h3>
+          <table class="data-table" id="customerTable">
+            <thead><tr>
+              <th>Нэр</th><th>Утас</th><th>Систем</th><th>Хаяг</th><th>Байдал</th><th>Үйлдэл</th>
+            </tr></thead>
+            <tbody id="customerBody">
+              <tr><td>Б.Дорж</td><td>9911-2233</td><td>Дохиолол</td><td>Сүхбаатар, 3-р хороо</td><td><span class="badge badge-green">Идэвхтэй</span></td><td><button class="appt-btn" onclick="viewCustomer(this)">Харах</button></td></tr>
+              <tr><td>С.Оюунцэцэг</td><td>9922-4455</td><td>CCTV</td><td>Хан-Уул, 11-р хороо</td><td><span class="badge badge-yellow">Суурилуулж байна</span></td><td><button class="appt-btn" onclick="viewCustomer(this)">Харах</button></td></tr>
+              <tr><td>Д.Энхбаяр</td><td>9933-6677</td><td>Хандалтын хяналт</td><td>Баянгол, 5-р хороо</td><td><span class="badge badge-blue">Захиалсан</span></td><td><button class="appt-btn" onclick="viewCustomer(this)">Харах</button></td></tr>
+              <tr><td>Сарчулуун ХХК</td><td>7700-8899</td><td>Иж бүрэн систем</td><td>Чингэлтэй, 1-р хороо</td><td><span class="badge badge-green">Идэвхтэй</span></td><td><button class="appt-btn" onclick="viewCustomer(this)">Харах</button></td></tr>
+              <tr><td>Н.Болд</td><td>9944-1122</td><td>Дохиолол</td><td>Баянзүрх, 7-р хороо</td><td><span class="badge badge-green">Идэвхтэй</span></td><td><button class="appt-btn" onclick="viewCustomer(this)">Харах</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- STAFF -->
+      <div class="panel" id="panel-staff">
+        <div class="dash-header">
+          <h2>🏢 АЖИЛТНУУД</h2>
+        </div>
+        <div class="card">
+          <h3>Ажилтнуудын мэдээлэл</h3>
+          <table class="data-table">
+            <thead><tr><th>Нэр</th><th>Албан тушаал</th><th>Ажлын байр</th><th>И-мэйл</th><th>Байдал</th><th>Үйлдэл</th></tr></thead>
+            <tbody id="staffTableBody">
+              <tr>
+                <td><strong>Ройс Беримболо</strong></td>
+                <td>Захирал</td>
+                <td>Оффис / Алсаас</td>
+                <td>royce@berimbolo.mn</td>
+                <td><span class="badge badge-green">Онлайн</span></td>
+                <td><button class="appt-btn" onclick="messageStaff('Ройс')">Мессеж</button></td>
+              </tr>
+              <tr>
+                <td><strong>Риксон Беримболо</strong></td>
+                <td>Захирал</td>
+                <td>Оффис / Алсаас</td>
+                <td>rickson@berimbolo.mn</td>
+                <td><span class="badge badge-yellow">Алсаас</span></td>
+                <td><button class="appt-btn" onclick="messageStaff('Риксон')">Мессеж</button></td>
+              </tr>
+              <tr>
+                <td><strong>Жеймс Де Соуса</strong></td>
+                <td>Оффисын ажилтан</td>
+                <td>Оффис</td>
+                <td>james@berimbolo.mn</td>
+                <td><span class="badge badge-green">Онлайн</span></td>
+                <td><button class="appt-btn" onclick="messageStaff('Жеймс')">Мессеж</button></td>
+              </tr>
+              <tr>
+                <td><strong>Сара Миклетвейт</strong></td>
+                <td>Оффисын ажилтан</td>
+                <td>Оффис</td>
+                <td>sara@berimbolo.mn</td>
+                <td><span class="badge badge-green">Онлайн</span></td>
+                <td><button class="appt-btn" onclick="messageStaff('Сара')">Мессеж</button></td>
+              </tr>
+              <tr>
+                <td><strong>Лу Чен</strong></td>
+                <td>Инженер</td>
+                <td>Алсаас (талбай)</td>
+                <td>lu@berimbolo.mn</td>
+                <td><span class="badge badge-yellow">Талбайд</span></td>
+                <td><button class="appt-btn" onclick="messageStaff('Лу Чен')">Мессеж</button></td>
+              </tr>
+              <tr>
+                <td><strong>Даррен Уильямс</strong></td>
+                <td>Инженер</td>
+                <td>Алсаас (талбай)</td>
+                <td>darren@berimbolo.mn</td>
+                <td><span class="badge badge-yellow">Талбайд</span></td>
+                <td><button class="appt-btn" onclick="messageStaff('Даррен')">Мессеж</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CCTV -->
+      <div class="panel" id="panel-cctv">
+        <div class="dash-header">
+          <h2>📹 CCTV ХЯНАЛТ</h2>
+          <span style="display:flex; align-items:center; gap:10px; color: var(--danger); font-size:13px; font-weight:700;">
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--danger);animation:pulse 1.5s infinite;display:inline-block;"></span>
+            БОДИТ ЦАГ
+          </span>
+        </div>
+        <div class="cctv-grid" id="cctvGrid">
+          <div class="cctv-feed" onclick="openCCTV('CAM-01')">
+            <div class="cctv-label">CAM-01 · ОРОЛТ</div>
+            <div class="cctv-rec">REC</div>
+            <div class="cctv-icon">📷</div>
+            <div class="cctv-status">Онлайн — Б.Дорж объект</div>
+          </div>
+          <div class="cctv-feed" onclick="openCCTV('CAM-02')">
+            <div class="cctv-label">CAM-02 · ГУДАМЖ</div>
+            <div class="cctv-rec">REC</div>
+            <div class="cctv-icon">📷</div>
+            <div class="cctv-status">Онлайн — Сарчулуун ХХК</div>
+          </div>
+          <div class="cctv-feed" onclick="openCCTV('CAM-03')">
+            <div class="cctv-label">CAM-03 · ДОТ. ХАШАА</div>
+            <div class="cctv-rec">REC</div>
+            <div class="cctv-icon">📷</div>
+            <div class="cctv-status">Онлайн — Н.Болд объект</div>
+          </div>
+          <div class="cctv-feed" style="border-color: var(--danger);" onclick="openCCTV('CAM-04')">
+            <div class="cctv-label">CAM-04 · АГУУЛАХ</div>
+            <div class="cctv-icon" style="color: var(--danger);">⚠️</div>
+            <div class="cctv-status" style="color: var(--danger);">Офлайн — Холбоо тасарсан</div>
+          </div>
+          <div class="cctv-feed" onclick="openCCTV('CAM-05')">
+            <div class="cctv-label">CAM-05 · ОФФИС</div>
+            <div class="cctv-rec">REC</div>
+            <div class="cctv-icon">📷</div>
+            <div class="cctv-status">Онлайн — Berimbolo оффис</div>
+          </div>
+          <div class="cctv-feed" onclick="openCCTV('CAM-06')">
+            <div class="cctv-label">CAM-06 · ПАРКИНГ</div>
+            <div class="cctv-rec">REC</div>
+            <div class="cctv-icon">📷</div>
+            <div class="cctv-status">Онлайн — Оффисын орчин</div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 24px;">
+          <h3>🚨 Дохиолол системийн байдал</h3>
+          <table class="data-table">
+            <thead><tr><th>Хэрэглэгч</th><th>Систем</th><th>Сүүлийн шалгалт</th><th>Байдал</th><th>Үйлдэл</th></tr></thead>
+            <tbody id="alarmTableBody">
+              <tr><td>Б.Дорж</td><td>Дохиолол + CCTV</td><td>Өнөөдөр 09:00</td><td><span class="badge badge-green">Хэвийн</span></td><td><button class="appt-btn" onclick="checkSystem('Б.Дорж')">Шалгах</button></td></tr>
+              <tr><td>Сарчулуун ХХК</td><td>Иж бүрэн систем</td><td>Өнөөдөр 08:30</td><td><span class="badge badge-green">Хэвийн</span></td><td><button class="appt-btn" onclick="checkSystem('Сарчулуун ХХК')">Шалгах</button></td></tr>
+              <tr><td>Агуулах 3</td><td>CCTV</td><td>Өчигдөр 22:00</td><td><span class="badge badge-red">Холбоо алдагдсан</span></td><td><button class="appt-btn" onclick="checkSystem('Агуулах 3')">Шалгах</button></td></tr>
+              <tr><td>Н.Болд</td><td>Дохиолол</td><td>Өнөөдөр 10:00</td><td><span class="badge badge-green">Хэвийн</span></td><td><button class="appt-btn" onclick="checkSystem('Н.Болд')">Шалгах</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- REPORTS -->
+      <div class="panel" id="panel-reports">
+        <div class="dash-header">
+          <h2>📋 ТАЙЛАН</h2>
+          <div style="display:flex; gap:12px;">
+            <select class="search-bar" style="max-width:140px;" id="reportPeriod" onchange="updateReports()">
+              <option value="month">Энэ сар</option>
+              <option value="quarter">Энэ улирал</option>
+              <option value="year">Энэ жил</option>
+            </select>
+            <button class="btn-sm btn-accent" onclick="exportReport()">📥 Экспорт</button>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="label">Энэ сарын орлого</div>
+            <div class="value">4.2М</div>
+            <div class="change">↑ 12% өссөн</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Суурилуулалт (сар)</div>
+            <div class="value">18</div>
+            <div class="change">↑ 3 нэмэгдсэн</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Засвар үйлчилгээ</div>
+            <div class="value">34</div>
+            <div class="change">Хэвийн</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Хэрэглэгч сэтгэл ханамж</div>
+            <div class="value">98%</div>
+            <div class="change">↑ 1%</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Сүүлийн үйл ажиллагааны бүртгэл</h3>
+          <table class="data-table">
+            <thead><tr><th>Огноо</th><th>Инженер</th><th>Ажил</th><th>Хэрэглэгч</th><th>Үр дүн</th></tr></thead>
+            <tbody id="reportTableBody">
+              <tr><td>2026.05.22</td><td>Лу Чен</td><td>Дохиоллын засвар</td><td>Б.Дорж</td><td><span class="badge badge-green">Дууссан</span></td></tr>
+              <tr><td>2026.05.21</td><td>Даррен</td><td>CCTV суурилуулалт</td><td>Монпол ХХК</td><td><span class="badge badge-green">Дууссан</span></td></tr>
+              <tr><td>2026.05.20</td><td>Лу Чен</td><td>Хандалтын шинэчлэл</td><td>Ц.Наранцэцэг</td><td><span class="badge badge-green">Дууссан</span></td></tr>
+              <tr><td>2026.05.19</td><td>Даррен</td><td>Ерөнхий үзлэг</td><td>Сарчулуун ХХК</td><td><span class="badge badge-green">Дууссан</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Appointment add modal -->
+<div class="mini-modal" id="apptModal">
+  <div class="mini-modal-box">
+    <button class="modal-close" onclick="closeApptModal()">✕</button>
+    <h3>Шинэ цаг товлох</h3>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>ХЭРЭГЛЭГЧИЙН НЭР</label>
+        <input type="text" id="aName" placeholder="Б.Болд" required>
+      </div>
+      <div class="form-group">
+        <label>ЦАГ</label>
+        <input type="time" id="aTime" value="10:00" required>
+      </div>
+      <div class="form-group">
+        <label>ҮЙЛЧИЛГЭЭ</label>
+        <select id="aService">
+          <option>Дохиоллын засвар</option>
+          <option>CCTV суурилуулалт</option>
+          <option>Хандалтын хяналт</option>
+          <option>Ерөнхий үзлэг</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>ИНЖЕНЕР</label>
+        <select id="aEngineer">
+          <option>Лу Чен</option>
+          <option>Даррен Уильямс</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>ХАЯГ</label>
+        <input type="text" id="aAddr" placeholder="Дүүрэг, хороо...">
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn-sm btn-accent" onclick="saveAppt()">Хадгалах</button>
+      <button class="btn-sm btn-ghost" onclick="closeApptModal()">Болих</button>
+    </div>
+  </div>
+</div>
+
+<!-- Chat Widget -->
+<button class="chat-widget" onclick="toggleChat()" data-tooltip="Live Chat">
+  💬
+  <span class="badge-new">1</span>
+</button>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+<!-- ─── CHATBOT ─── -->
+<div class="chatbot-overlay" id="chatbotOverlay" onclick="closeChatbot()"></div>
+<div class="chatbot-container" id="chatbotContainer">
+  <div class="chatbot-header">
+    <div class="chatbot-avatar">🤖</div>
+    <div class="chatbot-info">
+      <div class="chatbot-name">Berimbolo Assistant</div>
+      <div class="chatbot-status"><span class="status-dot"></span> Онлайн</div>
+    </div>
+    <button class="chatbot-close" onclick="closeChatbot()">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="chat-message bot">
+      <div class="message-bubble">Сайн байна уу! Би Berimbolo Security-ийн туслах робот. Танд ямар тусламж хэрэгтэй байна? 🤖</div>
+      <div class="message-time">Одоо</div>
+    </div>
+  </div>
+  <div class="chatbot-suggestions" id="chatbotSuggestions">
+    <button class="suggestion-chip" onclick="sendQuickMessage('Үйлчилгээний төрөл юу вэ?')">Үйлчилгээний төрөл?</button>
+    <button class="suggestion-chip" onclick="sendQuickMessage('Үнэ хэд вэ?')">Үнэ хэд вэ?</button>
+    <button class="suggestion-chip" onclick="sendQuickMessage('Хаяг хаана байдаг вэ?')">Хаяг?</button>
+    <button class="suggestion-chip" onclick="sendQuickMessage('Захиалга өгөх')">Захиалга өгөх</button>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Мессеж бичнэ үү..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+    <button class="chatbot-send" onclick="sendChatMessage()">📤</button>
+  </div>
+</div>
+</body>
+</html>
